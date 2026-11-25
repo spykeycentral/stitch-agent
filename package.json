@@ -1,0 +1,13 @@
+{
+  "name": "spykey-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified Spykey Vault media archive and editorial acquisition workspace",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
