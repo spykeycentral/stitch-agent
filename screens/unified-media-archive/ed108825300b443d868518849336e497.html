@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary": "#303030",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed": "#1a1c1c",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "background": "#050505",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-tint": "#c6c6c7",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#8e9192",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#474746",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "tertiary": "#ffffff",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#656464",
+                        "on-primary-fixed-variant": "#454747",
+                        "primary": "#ffffff",
+                        "inverse-primary": "#5d5f5f",
+                        "on-primary": "#2f3131",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed": "#e4e2e1",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "tertiary-container": "#e4e2e1",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-surface-variant": "#c4c7c8",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed": "#e2e2e2",
+                        "on-primary-container": "#636565",
+                        "on-surface": "#e5e2e1",
+                        "primary-container": "#e2e2e2",
+                        "on-secondary": "#313030",
+                        "secondary": "#c8c6c5",
+                        "outline-variant": "#444748"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-gap": "32px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1600px",
+                        "margin": "48px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333333;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed left-0 top-0 z-50 h-16 w-full flex justify-between items-center px-8 border-b border-[#1A1A1A] bg-[#050505] dark:bg-[#050505] font-inter tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-widest uppercase text-white">Vault</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-zinc-500 hover:text-white transition-colors text-metadata font-metadata" href="#">Dashboard</a>
+<a class="text-zinc-500 hover:text-white transition-colors text-metadata font-metadata" href="#">Directory</a>
+<a class="text-white border-b-2 border-white pb-1 text-metadata font-metadata" href="#">Uploader</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-sm">search</span>
+<input class="bg-[#0D0D0D] border border-[#1A1A1A] text-white text-metadata font-metadata pl-10 pr-4 py-1.5 focus:border-white focus:ring-0 w-64 transition-all" placeholder="Quick find..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-white hover:bg-[#0D0D0D] p-2 transition-all duration-200">account_circle</button>
+<button class="material-symbols-outlined text-white hover:bg-[#0D0D0D] p-2 transition-all duration-200">settings</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 z-40 h-screen w-64 flex flex-col py-8 border-r border-[#1A1A1A] bg-[#050505] dark:bg-[#050505] font-inter text-sm font-medium">
+<div class="px-8 mt-16 mb-8">
+<h2 class="text-white font-black text-headline-md font-headline-md mb-1">Library</h2>
+<p class="text-zinc-500 text-xs tracking-wider uppercase">Private Collection</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-8 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-105 transition-transform">grid_view</span>
+<span class="font-metadata text-metadata">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-8 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-105 transition-transform">group_work</span>
+<span class="font-metadata text-metadata">Directory</span>
+</a>
+<a class="flex items-center gap-3 px-8 py-3 bg-[#0D0D0D] text-white border-l-2 border-white transition-all group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+<span class="font-metadata text-metadata">Uploader</span>
+</a>
+<a class="flex items-center gap-3 px-8 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-105 transition-transform">settings</span>
+<span class="font-metadata text-metadata">Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 mt-16 p-margin min-h-[calc(100vh-64px)] custom-scrollbar">
+<div class="max-w-container-max mx-auto">
+<header class="mb-12">
+<h1 class="font-display text-display text-white mb-2">Ingest Media</h1>
+<p class="font-body-lg text-body-lg text-zinc-500 max-w-2xl">Expand your vault by importing local files or remote media assets. All content is indexed for your private gallery view.</p>
+</header>
+<div class="grid grid-cols-12 gap-grid-gap">
+<!-- Primary Uploader Section (Left) -->
+<div class="col-span-12 lg:col-span-7 space-y-grid-gap">
+<!-- Drag & Drop Zone -->
+<div class="bg-[#0D0D0D] border-2 border-dashed border-[#1A1A1A] hover:border-white/20 transition-all group aspect-video flex flex-col items-center justify-center p-12 text-center cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A dark and moody background image showing high-tech server racks with glowing blue lights in a minimalist digital vault setting. The lighting is low-key with sharp highlights on metallic surfaces, creating a sophisticated and secure cinematic atmosphere. Deep shadows and tonal layers of black and dark grey dominate the frame, suggesting a vast storage space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMfBuJIKoO2I2rdByYX52awdWD8AcUSfCbljFH4XLD_klK-UMDYYAbU2QJwTdCPz7Dj5S3v8by9wUTjyqrb2MNNHOzbBt_bEkimIBh8oduuM5dwHeln_6P4iAqogVjoi4t_AwmI5M2rbyqYrV69_TQqkXduAqVEIR_yZdpHGr9ONrahVwfXhzzB0Wm8vh1JA_yEEiOOFMPToCfDLEcO4c_JhG07qAM74T3HdEUmYrwob3INNxGOs28XV3bwOBmbZf_dT_5mxL-r54"/>
+</div>
+<div class="relative z-10">
+<div class="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/5 group-hover:bg-white/10 group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 0;">upload_file</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Drop local files here</h3>
+<p class="font-metadata text-metadata text-zinc-500 mb-8 uppercase tracking-widest">or</p>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 hover:opacity-90 transition-opacity active:scale-95">Browse Files</button>
+</div>
+</div>
+<!-- URL Input Section -->
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] p-gutter">
+<label class="font-label-caps text-label-caps text-zinc-500 block mb-4">Import from Remote URL</label>
+<div class="flex gap-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-sm">link</span>
+<input class="w-full bg-[#050505] border border-[#1A1A1A] text-white text-metadata font-metadata pl-10 pr-4 py-3 focus:border-white focus:ring-0 transition-all" placeholder="https://media-server.com/asset-v4-0291" type="url"/>
+</div>
+<button class="border border-[#333333] text-white font-label-caps text-label-caps px-6 py-3 hover:bg-[#1A1A1A] transition-all">Fetch Meta</button>
+</div>
+</div>
+</div>
+<!-- Metadata Form Section (Right) -->
+<div class="col-span-12 lg:col-span-5">
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] p-gutter space-y-8 sticky top-24">
+<div>
+<h4 class="font-headline-md text-headline-md text-white mb-1">Metadata</h4>
+<p class="font-metadata text-metadata text-zinc-500">Configure content properties for indexing.</p>
+</div>
+<!-- Title -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-zinc-400 block uppercase">Content Title</label>
+<input class="w-full bg-transparent border-b border-[#1A1A1A] focus:border-white focus:ring-0 text-body-lg font-body-lg text-white py-2 px-0 transition-all" placeholder="Enter title..." type="text"/>
+</div>
+<!-- Description -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-zinc-400 block uppercase">Description</label>
+<textarea class="w-full bg-[#050505] border border-[#1A1A1A] focus:border-white focus:ring-0 text-metadata font-metadata text-white p-4 transition-all" placeholder="Brief synopsis or personal notes..." rows="4"></textarea>
+</div>
+<!-- Cast / Actors -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-zinc-400 block uppercase">Key Personnel / Cast</label>
+<div class="flex flex-wrap gap-2 mb-3">
+<div class="bg-[#1A1A1A] flex items-center gap-2 pl-3 pr-1 py-1 rounded-sm border border-transparent hover:border-zinc-700 transition-all group">
+<span class="text-xs text-white">Christopher Nolan</span>
+<button class="material-symbols-outlined text-zinc-500 hover:text-white text-sm">close</button>
+</div>
+<div class="bg-[#1A1A1A] flex items-center gap-2 pl-3 pr-1 py-1 rounded-sm border border-transparent hover:border-zinc-700 transition-all">
+<span class="text-xs text-white">Cillian Murphy</span>
+<button class="material-symbols-outlined text-zinc-500 hover:text-white text-sm">close</button>
+</div>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-[#1A1A1A] focus:border-white focus:ring-0 text-metadata font-metadata text-white py-2 px-0 transition-all" placeholder="Add person..." type="text"/>
+<button class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-zinc-500">add</button>
+</div>
+</div>
+<!-- Tags -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-zinc-400 block uppercase">Categorization</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-[#1A1A1A] border border-white text-white font-label-caps text-[10px] cursor-pointer">CINEMATIC</span>
+<span class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] text-zinc-400 hover:border-white hover:text-white font-label-caps text-[10px] cursor-pointer transition-all">NOIR</span>
+<span class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] text-zinc-400 hover:border-white hover:text-white font-label-caps text-[10px] cursor-pointer transition-all">4K MASTER</span>
+<span class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] text-zinc-400 hover:border-white hover:text-white font-label-caps text-[10px] cursor-pointer transition-all">UNRATED</span>
+</div>
+</div>
+<!-- Visibility Switch -->
+<div class="flex items-center justify-between py-4 border-t border-[#1A1A1A]">
+<div>
+<p class="text-white font-metadata text-metadata">Private Mode</p>
+<p class="text-zinc-500 text-[10px] uppercase font-label-caps">Restricted to your vault only</p>
+</div>
+<div class="h-6 w-11 bg-white flex items-center px-1 cursor-pointer">
+<div class="h-4 w-4 bg-black"></div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex gap-4 pt-4">
+<button class="flex-1 bg-primary text-on-primary font-label-caps text-label-caps py-4 hover:opacity-90 transition-opacity active:scale-98">Commit to Vault</button>
+<button class="px-6 border border-[#333333] text-zinc-500 hover:text-white hover:border-white transition-all material-symbols-outlined">delete</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recently Added / Queue Section -->
+<section class="mt-20">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-white mb-1">Upload Queue</h2>
+<p class="font-metadata text-metadata text-zinc-500 uppercase tracking-widest">Processing Assets</p>
+</div>
+<button class="text-zinc-500 hover:text-white flex items-center gap-2 group transition-colors">
+<span class="font-label-caps text-label-caps">Clear Finished</span>
+<span class="material-symbols-outlined text-sm group-hover:rotate-90 transition-transform">refresh</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Queue Card 1 -->
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] p-4 flex gap-4 group hover:border-white/30 transition-all">
+<div class="w-24 h-32 bg-[#1A1A1A] flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of professional cinema equipment, focusing on the texture of a high-end camera lens and metal dials. The image is set in a dark film studio with soft, moody red and blue accent lighting reflecting off the glass. The aesthetic is incredibly premium and technical, fitting the dark cinematic theme of the digital vault uploader interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPX7NqOyBo2-9fmpy0LTUT0EjA5HjJhrCl867VNbvR8PLQA7qNYrapuneeyfBOTPh2h7eg0FOB2r01Ikx4Ujgz7bajXWH4uIq5uD41qDcRpm9xwJYC9_LPVz7g7Mmc1TesicOcXdNcym2cn6I4asCg8C02zMOPblC9lgh-4ML0RG1bYomw5gBcGvVKocH6XQEN04kp149EGa5wbaomfvKVxr8gymgKr9bKd-zVzog4IsFVyv8O3enQjmmXdCWIFzbIDLoJaES6Yyk"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h5 class="text-white font-metadata text-metadata truncate">Blade_Runner_Final_Cut_4K.mkv</h5>
+<p class="text-[10px] text-zinc-500 font-label-caps">12.4 GB • Processing</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-label-caps text-white">
+<span>ENCODING</span>
+<span>82%</span>
+</div>
+<div class="w-full h-1 bg-white/5 overflow-hidden">
+<div class="h-full bg-white w-[82%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Queue Card 2 -->
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] p-4 flex gap-4 group hover:border-white/30 transition-all">
+<div class="w-24 h-32 bg-[#1A1A1A] flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-50" data-alt="A minimalist cinematic poster style image featuring a single spotlight shining onto a dark stage. The atmosphere is dense with artificial fog, creating visible light beams against a pure black background. The lighting is cold white and high contrast, evoking a sense of mystery and prestige. This visual represents a premium media asset pending in a digital gallery queue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8NVSShLnhAybOgDE3oeh7ER7DVGP3xkkFMFyK8ham4Czrd7ZLFQYT_kgd-YX93Q9C2ng8nJ_WswRE9T845df5A3r2GCOj3RFLSMcV3ldGm6yGdmcaek4jBWDUK5dMF9HUJcLWmEdKQKQJ66IB6vzFUtwMSEbS7u-SkrwyFHIySk6qN9slZHQz-bXgRic6_jqKdZpWuz8UoYJ0sKakHIoqzsxEPR9BJbRx9YPp-XYUiDQPNgs5KnB3jSYFVvh_1XXA9CwZOtuZonM"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h5 class="text-white font-metadata text-metadata truncate">Dune_Part_Two_Trailer.mp4</h5>
+<p class="text-[10px] text-zinc-500 font-label-caps">450 MB • Uploading</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-label-caps text-white">
+<span>TRANSFERRING</span>
+<span>24%</span>
+</div>
+<div class="w-full h-1 bg-white/5 overflow-hidden">
+<div class="h-full bg-white w-[24%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Queue Card 3 -->
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] p-4 flex gap-4 group hover:border-white/30 transition-all">
+<div class="w-24 h-32 bg-[#1A1A1A] flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dark gallery space with a large projected screen displaying abstract monochrome patterns. The room is mostly in shadows, with faint light bouncing off a polished concrete floor. The aesthetic is clean, modern, and high-end, focusing on visual fidelity and a quiet cinematic atmosphere suitable for a premium media management tool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFsym2KaD0CsZxpgrBBscV-JO7kA2KA7zTifrHw8ssB7gw97bfpdOT4UCT2lUv2Dz1qWyen6WLBVzTSR3JQOQfp3Ayux8iQOzG_pLqSdUxZ7Efxks1V9KKdTJUglEuWOG96gUIua_sWvn-HukfgPnV9nPmKE62Lg0aoC_QzIG-QPfvChwqhiYnBfSbB9QGI4fgsM9QDjl2x2QwcYeN8MI9aFguVF8WAp3D7CydxwEdHrL1hx2bs5BGZgqHpvPWLoa_Hm7zbaSywDQ"/>
+<div class="absolute inset-0 bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">check_circle</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h5 class="text-white font-metadata text-metadata truncate">Interstellar_Soundtrack_Lossless.wav</h5>
+<p class="text-[10px] text-zinc-500 font-label-caps">1.2 GB • Ready</p>
+</div>
+<div class="pt-4">
+<button class="w-full border border-[#333333] text-white font-label-caps text-[10px] py-2 hover:bg-white hover:text-black transition-all">VIEW IN VAULT</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Contextual FAB (Hidden as per mandate for transactional screens, but here for structural demonstration if needed) -->
+<!-- Suppression Logic: Suppressed because this is a Task-Focused "Uploader" screen -->
+</body></html>

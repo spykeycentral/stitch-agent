@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#690005",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary": "#303030",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed": "#1a1c1c",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "background": "#050505",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-tint": "#c6c6c7",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#8e9192",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "secondary-container": "#474746",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "tertiary": "#ffffff",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary-container": "#656464",
+                    "on-primary-fixed-variant": "#454747",
+                    "primary": "#ffffff",
+                    "inverse-primary": "#5d5f5f",
+                    "on-primary": "#2f3131",
+                    "surface-variant": "#353534",
+                    "tertiary-fixed": "#e4e2e1",
+                    "primary-fixed-dim": "#c6c6c7",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "tertiary-container": "#e4e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-secondary-container": "#b7b5b4",
+                    "on-surface-variant": "#c4c7c8",
+                    "surface-container-highest": "#353534",
+                    "primary-fixed": "#e2e2e2",
+                    "on-primary-container": "#636565",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#e2e2e2",
+                    "on-secondary": "#313030",
+                    "secondary": "#c8c6c5",
+                    "outline-variant": "#444748"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "grid-gap": "32px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "container-max": "1600px",
+                    "margin": "48px"
+            },
+            "fontFamily": {
+                    "metadata": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .cinematic-overlay {
+            background: linear-gradient(0deg, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0) 60%);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#050505] text-on-background font-body-md overflow-x-hidden">
+<nav class="flex justify-between items-center w-full px-8 h-16 bg-[#050505] dark:bg-[#050505] fixed top-0 z-50 border-b border-[#1A1A1A]">
+<div class="flex items-center gap-12">
+<span class="text-lg font-bold tracking-widest uppercase text-white font-inter">Vault</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-white border-b-2 border-white pb-1 font-inter text-sm font-medium" href="#">Dashboard</a>
+<a class="text-zinc-500 hover:text-white transition-colors font-inter text-sm font-medium" href="#">Directory</a>
+<a class="text-zinc-500 hover:text-white transition-colors font-inter text-sm font-medium" href="#">Uploader</a>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-12">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-sm">search</span>
+<input class="w-full bg-[#0D0D0D] border border-[#1A1A1A] rounded text-white px-10 py-2 focus:outline-none focus:border-white transition-colors font-metadata" placeholder="Search your vault..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-zinc-500 hover:text-white transition-all duration-200 scale-105">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button class="text-zinc-500 hover:text-white transition-all duration-200 scale-105">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</nav>
+<aside class="fixed left-0 top-0 h-screen w-64 flex flex-col py-8 z-40 bg-[#050505] dark:bg-[#050505] border-r border-[#1A1A1A] mt-16 hidden lg:flex">
+<div class="px-6 mb-8">
+<h2 class="text-white font-black font-inter text-sm tracking-wider uppercase">Library</h2>
+<p class="text-zinc-500 text-xs font-metadata">Private Collection</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-3 bg-[#0D0D0D] text-white border-l-2 border-white font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">group_work</span>
+                Directory
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">cloud_upload</span>
+                Uploader
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<div class="mt-auto px-6 border-t border-[#1A1A1A] pt-6">
+<p class="text-zinc-500 text-xs mb-4 font-label-caps">STORAGE</p>
+<div class="w-full bg-[#1A1A1A] h-1 rounded-full mb-2">
+<div class="bg-white w-2/3 h-full rounded-full"></div>
+</div>
+<p class="text-white text-[10px] font-metadata">64.2 GB of 100 GB used</p>
+</div>
+</aside>
+<main class="lg:ml-64 pt-24 px-8 pb-12">
+<header class="mb-12">
+<h1 class="font-display text-display text-white mb-2">Collection</h1>
+<p class="text-zinc-400 font-body-lg">Curated media from across the digital landscape.</p>
+</header>
+<section class="flex gap-3 mb-10 overflow-x-auto hide-scrollbar pb-2">
+<button class="px-5 py-2 rounded-full border border-white bg-white text-black font-label-caps whitespace-nowrap">All Items</button>
+<button class="px-5 py-2 rounded-full border border-[#1A1A1A] bg-[#0D0D0D] text-zinc-400 hover:border-white transition-colors font-label-caps whitespace-nowrap">Cinematography</button>
+<button class="px-5 py-2 rounded-full border border-[#1A1A1A] bg-[#0D0D0D] text-zinc-400 hover:border-white transition-colors font-label-caps whitespace-nowrap">Action</button>
+<button class="px-5 py-2 rounded-full border border-[#1A1A1A] bg-[#0D0D0D] text-zinc-400 hover:border-white transition-colors font-label-caps whitespace-nowrap">Inspiration</button>
+<button class="px-5 py-2 rounded-full border border-[#1A1A1A] bg-[#0D0D0D] text-zinc-400 hover:border-white transition-colors font-label-caps whitespace-nowrap">Architecture</button>
+<button class="px-5 py-2 rounded-full border border-[#1A1A1A] bg-[#0D0D0D] text-zinc-400 hover:border-white transition-colors font-label-caps whitespace-nowrap">Product Design</button>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-grid-gap">
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Cinematic shot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic, low-angle shot of neon lights reflecting on a rain-slicked city street at night. The atmosphere is heavy with atmosphere, featuring deep blacks and vibrant cyan and magenta highlights. The style is hyper-realistic and moody, echoing a cyberpunk aesthetic with high contrast and sharp focus on the glistening pavement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWEcAngzVs_BUer46ZVzYzUvwnNfhJrSr0AEdFvx07BjZ8AKRqnZFe7o_XaeAyHo5QGAHI_rjNsFIJcfsfsUSiFk0EJ7uM1OAk6BGpkbEzcD0oGKJTRx06YHHzV-x4JUbN-50FsvV1vBnh702_dJP4iXuh5VSL5s-Mdmb29TSTGzGtZSx87_-DVvepYu2QqugXAcobMRvTaJ4fQnTJ9JzRlOjdTRAbjER7FwQUogkUyHhRC09Z4EjPp0W0PmCrRCg39A0_oRz3EFo"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">CINEMATOGRAPHY</p>
+<h3 class="text-white font-headline-md leading-tight">After Hours in Shibuya</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+<span class="text-white text-xs font-metadata">0:15 Video Preview</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Abstract digital art" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist abstract digital art piece featuring flowing ribbons of white and dark grey light suspended in a void. The composition is elegant and balanced, with a sense of fluid motion. The lighting is soft and directional, highlighting the smooth textures and creating a sophisticated gallery aesthetic consistent with a high-end digital vault interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOanZaUlRuOj1ar_q1DChPXn93WiIHCfJ_pKCYouu0OWtoNTzrkOndP-D_ACWFFif46Z6iQB24EEXtQxwsFBNJy_ueu-v8rPvhuMzEIJXPgSev2r77Nr-HG8rD9uJJB4z4ABTG-EYEf5NeGwusG4BV4e1Ka4C6Xh5iI5gFXtPj7n2jRwkbv5lcFp7liMxoh-Hg4MQ6XfPJkC22MPzGJnNZR1lXi9QQi-QznQCTU-qXEH0_9GUhAz3i6ecLnUd187OPIGyJq0XNQCY"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">INSPIRATION</p>
+<h3 class="text-white font-headline-md leading-tight">Fluidity Concept No. 4</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">image</span>
+<span class="text-white text-xs font-metadata">High-Res Image</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Nature scene" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dark, atmospheric landscape of a dense pine forest shrouded in thick morning fog. The trees are dark silhouettes against a moody, desaturated grey sky. The lighting is dim and diffused, creating a serene yet mysterious cinematic mood. The entire scene is framed with a minimalist aesthetic, focusing on depth and tonal layers of charcoal and deep green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlBb7JJvRqJ3fDM4Ew-CbXRYkKNvU5Td8dAYDYBhvBxDuRCA-z-WwuVd28XRrCPe3E_B8SklIVqbihG4Zp5s5jdlg-PvySc0FyhYWFNltaYfiNG0k_ndrNMQR-NwNfvdLaMy9F8cJrK4x3Hn0uVQBJ5hbWk-7jChs48UsGnLN19GjKBTxoI3vSWVD00yeGwzLqTlBFjU34nHy1mDm6xAc3Wk_r-wY9hct30YQwdkAPTOsVrmsPxhOBxpWsyI_wq5yS9LGGcJebZFw"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">CINEMATOGRAPHY</p>
+<h3 class="text-white font-headline-md leading-tight">Mist Over Northern Range</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">link</span>
+<span class="text-white text-xs font-metadata">Location Scout</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Automotive design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast, low-key photograph of a vintage black sportscar's sleek curves. The car is partially illuminated by a single overhead softbox, creating sharp highlights on the polished metal and deep shadows in the background. The aesthetic is extremely premium and focused, emphasizing form and material in a dark, studio setting with a monochrome palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAILqKsoUMWVIMZaNnzuJnJjUyi2uefu7Reaob-xhU_L5PvtqWsRlII-BkSyc53uQ1yY5tY9iZjsYmrtGpaYNDW6J1XtuVZtUVk4GmDtNEEeHVG_qpqu7n8ntUnyesLMeuQr2Jz2uCxywgdVgo6YfUAWLigou9zyfhS2aZYuok1Wg73EsmpZW2i_dtU2nTkoiNt5IiF4jWK8VFAYjvqj7m9A42PNrH7UEmRLJW39Eq-fmZSozaUNgHupxMxBTc6w7nQxxJLMgm1oBQ"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">PRODUCT DESIGN</p>
+<h3 class="text-white font-headline-md leading-tight">Obsidian GT Silhouette</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">image</span>
+<span class="text-white text-xs font-metadata">Product Reference</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Architecture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A striking architectural perspective of a brutalist concrete building against a stark, high-contrast sky. The sharp angles and raw texture of the concrete are emphasized by dramatic sunlight casting long, deep shadows. The composition is modern and minimalist, utilizing a restricted palette of greys and blacks to evoke a sense of strength and permanence in a digital gallery space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0bmSS09oFTFhenUX3j2x4Ab98UmbvCZ77xAda3uhHmY0trjsK1vb_OMzIlo2GVzqbrcigNYGDN9RJqR4Zk-Lu9-3MnoczhwfXHCJm5BKK2Slfn7UpeU-Nb-4B6QsltzPCeAMz1xL8mB91bbn6IjWoHh4lUdIZWoyhEsV1B07BkjWZluO0rfZ7FrHwxFldH58L8F_4_xYaLD6p_xLmgci3lzvQBm2DeV84hy_MUWsJxKmWyFcpLwZE61Hzq0SBt63Wpn-x6ARo9UY"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">ARCHITECTURE</p>
+<h3 class="text-white font-headline-md leading-tight">Monolith Structure A1</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">link</span>
+<span class="text-white text-xs font-metadata">Source Reference</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Action scene" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dynamic action shot of a person jumping through a portal of purple and blue cosmic energy. The figure is captured mid-air with incredible detail, surrounded by glowing sparks and celestial nebulas. The lighting is intense and otherworldly, creating a vibrant focal point against the deep black of space. The mood is epic and high-energy, rendered in a sharp, cinematic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZerd3IdPLwRL1jUchiFF2D84HMODPdI2AFgL4v0ZQhDw5cGQMHKTwR5pYgDhSLMUTnfQaa80HMG8FcDZBpEevATH8R4BKwLeZsck-vktRjcHfbAG9pLGa8NMJkcj3VfyDpI1y1Nnye6HjwDNb1YoXr2nI22glYo2d9fYz5tGmGh3OiMYm-_98el-RU5zJwQnZ6cAMljeraulxesuhRRoHW4DNP9uOMnBiCegom24LnJMNEDB8j63h4CLNlB5ciAYgIbBEpjFFVw"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">ACTION</p>
+<h3 class="text-white font-headline-md leading-tight">Void Jumper Sequence</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">play_circle</span>
+<span class="text-white text-xs font-metadata">4K Clip</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Vast landscape" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A breathtaking view of a mountain range reflecting in a perfectly still, dark lake at twilight. The sky is a deep indigo with the first stars appearing, and the mountains are sharp, snow-capped peaks. The mood is peaceful and immense, captured with a wide-angle lens to emphasize the vastness of the natural world in a dark, cinematic tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDva0bYWa48lNGD9PRWdUVkf6ObJEzxSK9oHo8zT11iEcAIG8XmPmzt2ROVGCR6gHR118CPABSu6LtNJIRHVfKW4Xf4Li88JV6FLROrvlF19CXkSMs_86x8MMRupAv39xRKG4jIhRdYvvGLK7N5pF44iloUIh6ORTIkb-IOKE78Peq1eqhlowcP7iGX_yPm7LqvSrfisyMSnaJgy5blJ7kTLCizsdxbjKPrNcawA7vNucSlaJ_LZY4BbrPFyYSkaLqfAMLbCxyOfpU"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">INSPIRATION</p>
+<h3 class="text-white font-headline-md leading-tight">Eternal Echo Peaks</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">image</span>
+<span class="text-white text-xs font-metadata">Wallpaper Grade</span>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-[#0D0D0D] border border-[#1A1A1A] aspect-[2/3] cursor-pointer">
+<img alt="Texture study" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An extreme macro shot of dark volcanic sand with intricate patterns formed by wind. The individual grains are visible, catching glints of cold light that highlight the jagged textures. The palette is strictly monochrome, ranging from deep charcoal to silver-grey. The composition is abstract and geometric, focusing on the organic complexity of the material in a dark studio atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0gbFLucegoyA2u6MomYBLQ5oFDnmGKv1nSyEuFiQe7-Re2cjhguJxxqEoQPdxFtFdl-CKB5E7BQ8NdYIPIh-2WV4Nu54jDgfnKwVyHU1MwT6nn4sKkQwVPlEC4X64SLsCuKAqjJ_VVmspR5UalwribDDt02N1vD5U8oUUpEBDg0i3gn3ekoaLUj4KA3P0t_uvkyMQDs4OM8HuR0CPFrQ2vRIgGHFLdTYNdOXZ6BgcOB9YWRyXUiRXi1cDJWQF8orz1ZuyUEbP4C0"/>
+<div class="absolute inset-0 cinematic-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white font-label-caps text-[10px] mb-2 opacity-70">INSPIRATION</p>
+<h3 class="text-white font-headline-md leading-tight">Texture Study: Basalt</h3>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-white text-sm">image</span>
+<span class="text-white text-xs font-metadata">Asset Export</span>
+</div>
+</div>
+</div>
+</section>
+<div class="mt-12 pt-8 border-t border-[#1A1A1A] flex justify-between items-center">
+<div class="flex items-center gap-2 text-zinc-500 font-metadata">
+<span>Showing 1-24 of 1,208 items</span>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-[#1A1A1A] text-white hover:bg-[#0D0D0D] transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-[#1A1A1A] text-white hover:bg-[#0D0D0D] transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-white text-black rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

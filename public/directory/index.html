@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#690005",
+            "secondary-fixed": "#e5e2e1",
+            "on-tertiary": "#303030",
+            "on-background": "#e5e2e1",
+            "on-tertiary-fixed-variant": "#474747",
+            "surface-bright": "#3a3939",
+            "on-primary-fixed": "#1a1c1c",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "background": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-tint": "#c6c6c7",
+            "inverse-on-surface": "#313030",
+            "surface-container-high": "#2a2a2a",
+            "outline": "#8e9192",
+            "surface-container": "#201f1f",
+            "on-error-container": "#ffdad6",
+            "inverse-surface": "#e5e2e1",
+            "surface": "#131313",
+            "secondary-fixed-dim": "#c8c6c5",
+            "secondary-container": "#474746",
+            "on-tertiary-fixed": "#1b1c1c",
+            "tertiary": "#ffffff",
+            "surface-container-low": "#1c1b1b",
+            "on-secondary-fixed-variant": "#474746",
+            "on-tertiary-container": "#656464",
+            "on-primary-fixed-variant": "#454747",
+            "primary": "#ffffff",
+            "inverse-primary": "#5d5f5f",
+            "on-primary": "#2f3131",
+            "surface-variant": "#353534",
+            "tertiary-fixed": "#e4e2e1",
+            "primary-fixed-dim": "#c6c6c7",
+            "tertiary-fixed-dim": "#c8c6c6",
+            "tertiary-container": "#e4e2e1",
+            "surface-dim": "#131313",
+            "on-secondary-fixed": "#1c1b1b",
+            "on-secondary-container": "#b7b5b4",
+            "on-surface-variant": "#c4c7c8",
+            "surface-container-highest": "#353534",
+            "primary-fixed": "#e2e2e2",
+            "on-primary-container": "#636565",
+            "on-surface": "#e5e2e1",
+            "primary-container": "#e2e2e2",
+            "on-secondary": "#313030",
+            "secondary": "#c8c6c5",
+            "outline-variant": "#444748"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "grid-gap": "32px",
+            "gutter": "24px",
+            "unit": "8px",
+            "container-max": "1600px",
+            "margin": "48px"
+          },
+          "fontFamily": {
+            "metadata": ["Inter"],
+            "label-caps": ["Inter"],
+            "headline-lg": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "display": ["Inter"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+            "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #050505; color: #e5e2e1; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #050505; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #1A1A1A; border-radius: 2px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #333333; }
+  </style>
+<link rel="stylesheet" href="/styles/tokens.css"/>
+</head>
+<body class="font-body-md overflow-hidden bg-[#050505]">
+<!-- TopNavBar Implementation -->
+<header class="bg-[#050505] dark:bg-[#050505] text-white dark:text-white font-inter tracking-tight docked full-width top-0 border-b border-[#1A1A1A] flat no shadows flex justify-between items-center w-full px-8 h-16 fixed top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-widest uppercase text-white">Vault</span>
+<nav class="flex gap-6 items-center h-full">
+<a class="text-zinc-500 hover:text-white transition-colors text-metadata font-metadata" href="/dashboard">Movies</a>
+<a class="text-zinc-500 hover:text-white transition-colors text-metadata font-metadata" href="/dashboard">TV Shows</a>
+<a class="text-white border-b-2 border-white pb-1 text-metadata font-metadata" href="/directory">Directory</a>
+<a class="text-zinc-500 hover:text-white transition-colors text-metadata font-metadata" href="/dashboard">Collections</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative flex items-center bg-[#0D0D0D] border border-[#1A1A1A] rounded px-3 py-1.5 focus-within:border-white transition-all">
+<span class="material-symbols-outlined text-zinc-500 text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-white placeholder-zinc-600 p-0" placeholder="Search people..." type="text"/>
+</div>
+<div class="flex items-center gap-1">
+<button class="hover:bg-[#0D0D0D] transition-all duration-200 p-2 rounded scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-white">account_circle</span>
+</button>
+<button class="hover:bg-[#0D0D0D] transition-all duration-200 p-2 rounded scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-white">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar Implementation -->
+<aside class="bg-[#050505] dark:bg-[#050505] text-white dark:text-white font-inter text-sm font-medium fixed left-0 top-0 h-screen w-64 flex flex-col py-8 z-40 border-r border-[#1A1A1A] flat no shadows pt-24">
+<div class="px-6 mb-8">
+<h2 class="text-white font-black font-headline-md text-headline-md tracking-tight">Library</h2>
+<p class="text-zinc-500 text-metadata font-metadata">Private Collection</p>
+</div>
+<nav class="flex flex-col w-full">
+<a class="text-zinc-500 hover:text-zinc-200 flex items-center gap-4 px-6 py-3 transition-all hover:bg-[#0D0D0D]" href="/dashboard">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-metadata text-metadata">Dashboard</span>
+</a>
+<a class="bg-[#0D0D0D] text-white border-l-2 border-white flex items-center gap-4 px-6 py-3 Active: scale-98 transition-all" href="/directory">
+<span class="material-symbols-outlined">group_work</span>
+<span class="font-metadata text-metadata">Directory</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 flex items-center gap-4 px-6 py-3 transition-all hover:bg-[#0D0D0D]" href="/uploader">
+<span class="material-symbols-outlined">cloud_upload</span>
+<span class="font-metadata text-metadata">Uploader</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 flex items-center gap-4 px-6 py-3 transition-all hover:bg-[#0D0D0D]" href="/checkout">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-metadata text-metadata">Checkout</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] rounded p-4">
+<p class="text-label-caps font-label-caps text-zinc-500 mb-2">STORAGE</p>
+<div class="w-full bg-[#1A1A1A] h-1 rounded-full overflow-hidden">
+<div class="bg-white h-full w-[65%]"></div>
+</div>
+<p class="text-[10px] text-zinc-400 mt-2">1.2 TB of 2.0 TB used</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 h-screen overflow-y-auto custom-scrollbar">
+<div class="max-w-[1600px] mx-auto p-12">
+<!-- Header Section -->
+<div class="flex flex-col gap-2 mb-12">
+<h1 class="font-display text-display text-white">Directory</h1>
+<p class="text-body-lg font-body-lg text-zinc-400 max-w-2xl">Manage your collection's intellectual inventory through deep-linked talent profiles and organized metadata taxonomies.</p>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- People Section (8 columns) -->
+<section class="col-span-8 flex flex-col gap-8">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-white">People</h2>
+<div class="flex gap-3">
+<button class="bg-[#0D0D0D] border border-[#1A1A1A] text-white px-4 py-2 rounded text-metadata font-metadata hover:border-white transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+              </button>
+<button class="bg-white text-[#050505] px-4 py-2 rounded text-metadata font-metadata font-bold flex items-center gap-2 hover:bg-zinc-200 transition-colors">
+<span class="material-symbols-outlined text-sm">person_add</span> Add Actor
+              </button>
+</div>
+</div>
+<!-- People Bento/Grid -->
+<div class="grid grid-cols-3 gap-6">
+<!-- Actor Card 1 -->
+<div class="group relative aspect-[3/4] bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-zinc-500">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A cinematic black and white close-up headshot of a mature actor with expressive eyes and a rugged beard. The lighting is dramatic and directional, casting half of his face in deep shadow, consistent with a high-end film noir aesthetic. The background is a dark, out-of-focus studio setting that emphasizes the subject's intensity and prestige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLALg3xwibTRNLjl9H1p0a1303H2pYKtkLCVTMUS0JktAFEa8pg7c9ehwFFZeEstC97C8O9AuCB4cCPGll0OknaptRu1buc83PZlUaCGxU1kmANMYwSVHdA-XgGF-iY6W1MyYnbTbPupZzKHHUFfvGByjReywAwarAIWfgLwVQ-gDZ5v3u8GUs028gcCa9xw94W3GXHkkpfE_n4raxTZfNbk9Dew5LR1Ha3gt1AcKzSqnGN8ZMQ0JaglYf6_zGJ6bbRJg2uEh00pA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Elias Thorne</h3>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-zinc-400">ACTOR / DIRECTOR</span>
+<span class="text-metadata font-metadata text-white">12 Items</span>
+</div>
+</div>
+</div>
+<!-- Actor Card 2 -->
+<div class="group relative aspect-[3/4] bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-zinc-500">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional headshot of a female actor with a confident expression and striking features. Her hair is styled in soft waves, and she is wearing a minimalist black turtleneck. The lighting is high-key but soft, creating a glowing, sophisticated aura against a dark charcoal grey background, evoking a sense of modern cinematic elegance and professional poise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO-aCbgf7RvsJcMQnq_-fsKE4Uz0DBNB_jrrkFx1Fi6o2kQ51ItxJqBJVBimVXPuoflmyUTmPSwolXhbsmeiK3ayfkJWArOm9Bwk5ZJ3bfBRxHWpG-PUWDAXwjuYDnx5WSRId4qr3rgsJVlTnHB2kgN2J3dXDe3yKMhMNf_aoWdmo6aE6ZDLujStjiBgZq0OZp_N11KauzDccmFoTv3wwG0OfM8k4NSCCVgPL-PMI3KCoUcrPc8ThcKyirp-CqrDt4mM7iRWCCLss"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Selena Vance</h3>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-zinc-400">ACTRESS</span>
+<span class="text-metadata font-metadata text-white">28 Items</span>
+</div>
+</div>
+</div>
+<!-- Actor Card 3 -->
+<div class="group relative aspect-[3/4] bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-zinc-500">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A crisp, modern headshot of a younger male actor with short-cropped hair and a thoughtful, focused expression. He is positioned slightly off-center in a cinematic composition. The lighting features a cool rim light that separates him from the dark, textured background, creating a high-contrast, premium digital vault atmosphere suitable for a gallery of talent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeZAq8SSAwj7MH8JtOIYyjyXqnEXS5GIosSMRiyj2ibOgjOcKzVea_iyIjkIUPTlO_0hJhNIdr4JjYJXOy4pdSWWSiBfMB7HgDuEtjIVOIaT09VYJjvb41IwfS2twhMaj_q6SPoNvjsObcaHh2oxJm4f4uOuvKcwOm1kzOFNV-1SYqibKv__K7rDbGcHqoIyeLlUJQCB9EGeHaMUecYBgqLTTtQtxnTaqrKMNkOyXyhfCYGKf6U6AhZyVCUiplG8NLqjIFCsIX-uI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Julian Moore</h3>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-zinc-400">ACTOR</span>
+<span class="text-metadata font-metadata text-white">8 Items</span>
+</div>
+</div>
+</div>
+<!-- Actor Card 4 -->
+<div class="group relative aspect-[3/4] bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-zinc-500">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An artistic portrait of a woman with a bold, creative appearance, featuring sharp eyeliner and an elegant upswept hairstyle. The shot is tightly cropped as a close-up. The lighting is moody and atmospheric, using subtle blue and purple ambient tones to create a futuristic, cinematic feel that highlights her role in avant-garde digital media productions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxcJ9o4647mpJXIXTAereKBXdeRrIO54ECMmc4GUdS7K8ohKO2urpMoTxh-dVRuN6roscN-6ZOyx8xyd4tdkgXD_wNmZfJ7NDrT9OM4-ebvzrCSCMCiiDoTv4BU8ioGy8BszM0jF5ofu_IXW3ZfuvThfuewte3LS0jUDsU7ST1ozaBFgRR2q2X-rRg6MvlDT3B3pt8EoYiGepkKKTwHeFoZBu_Pg92GjOVnE3hWdiJX4X2bmEE_2hBfqgR-YMs3HxxKWkzWuS9fZ0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Kaia Sterling</h3>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-zinc-400">WRITER / ACTRESS</span>
+<span class="text-metadata font-metadata text-white">15 Items</span>
+</div>
+</div>
+</div>
+<!-- Actor Card 5 -->
+<div class="group relative aspect-[3/4] bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-zinc-500">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a male actor with a warm, approachable smile and gentle features. The lighting is soft and natural, suggesting an outdoor or sunlit studio setting with a very shallow depth of field. The background is a dark forest green that feels deep and cinematic, lending a sophisticated yet grounded quality to the talent profile in the digital gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkLS7Zd_4_s1le_6Bce1jqnLuBmchIxqT1syImOgnNrCaGDxvXu4pOfHypkJEiUXBYw2fw7RSbjCu1X4ZTWLZkUmc1P5oVHg5NjQIrupySseItjiW2CbVjjXC35IM5FrtwtP11GE0FaUS3kK7c7VdjE4kRLs-CFInBRFcYRpxchl9yXSZjXypkyHbURDLsSW5d9YDaAidRWUJjancUVsb3XL2zfBzcdc1iuq2CSrH_G4PkU7v5kDYFJgk6UqxUORHmBlNgUPCVDh4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Marcus Reed</h3>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-zinc-400">PRODUCER / ACTOR</span>
+<span class="text-metadata font-metadata text-white">42 Items</span>
+</div>
+</div>
+</div>
+<!-- Add New Placeholder -->
+<button class="aspect-[3/4] bg-transparent border-2 border-dashed border-[#1A1A1A] rounded-lg flex flex-col items-center justify-center gap-4 group hover:border-[#333333] transition-all">
+<div class="w-12 h-12 rounded-full border border-[#1A1A1A] flex items-center justify-center group-hover:bg-[#0D0D0D] transition-colors">
+<span class="material-symbols-outlined text-zinc-500">add</span>
+</div>
+<span class="text-label-caps font-label-caps text-zinc-500">Import Talent</span>
+</button>
+</div>
+</section>
+<!-- Tags Management (4 columns) -->
+<aside class="col-span-4 flex flex-col gap-8">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-white">Tags</h2>
+<button class="text-zinc-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg p-6">
+<!-- Search Tags -->
+<div class="mb-6">
+<div class="flex items-center bg-[#050505] border border-[#1A1A1A] rounded px-3 py-2">
+<span class="material-symbols-outlined text-zinc-500 text-sm mr-2">tag</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-white placeholder-zinc-600 p-0" placeholder="Search categories..." type="text"/>
+</div>
+</div>
+<!-- Tag Categories -->
+<div class="flex flex-col gap-6">
+<!-- Category 1 -->
+<div>
+<p class="text-label-caps font-label-caps text-zinc-500 mb-3">GENRE</p>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    Sci-Fi <span class="text-zinc-500 text-[10px]">124</span>
+</div>
+<div class="px-3 py-1 bg-white border border-white rounded text-metadata font-metadata text-[#050505] flex items-center gap-2 transition-all cursor-pointer">
+                    Thriller <span class="text-zinc-500 text-[10px]">89</span>
+</div>
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    Neo-Noir <span class="text-zinc-500 text-[10px]">56</span>
+</div>
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    Indie <span class="text-zinc-500 text-[10px]">212</span>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div>
+<p class="text-label-caps font-label-caps text-zinc-500 mb-3">PRODUCTION</p>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    4K HDR <span class="text-zinc-500 text-[10px]">442</span>
+</div>
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    IMAX <span class="text-zinc-500 text-[10px]">12</span>
+</div>
+<div class="px-3 py-1 bg-[#1A1A1A] border border-[#333333] rounded text-metadata font-metadata text-white flex items-center gap-2 hover:border-white transition-all cursor-pointer">
+                    60 FPS <span class="text-zinc-500 text-[10px]">8</span>
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div>
+<p class="text-label-caps font-label-caps text-zinc-500 mb-3">CURATION</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between p-2 hover:bg-[#141414] rounded transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white">favorite</span>
+<span class="text-metadata font-metadata text-white">Personal Favorites</span>
+</div>
+<span class="text-zinc-500 text-[10px]">32</span>
+</div>
+<div class="flex items-center justify-between p-2 hover:bg-[#141414] rounded transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white">visibility</span>
+<span class="text-metadata font-metadata text-white">Watch List</span>
+</div>
+<span class="text-zinc-500 text-[10px]">128</span>
+</div>
+<div class="flex items-center justify-between p-2 hover:bg-[#141414] rounded transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white">archive</span>
+<span class="text-metadata font-metadata text-white">Archived</span>
+</div>
+<span class="text-zinc-500 text-[10px]">14</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Person Detail (Bento Mini) -->
+<div class="bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg overflow-hidden">
+<div class="h-32 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A wide cinematic backdrop image showing a blurry film set with camera equipment and bright studio lights. The atmosphere is warm and active, with silhouettes of crew members working in the distance. The lighting is diffused, with golden lens flares creating a high-end production feel for a profile featured in the vault." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIKUKsYQYe3mHMM4pSZjJqO5l3HSvJqfyZIu8cnpyOfNR5PG8XvZoxu-aZA4vuSP7sE8Bkezh6rn4dUGfslzqTGpW4dpPmX1PJcMLICySsjLccisxga49mjbU1RAllH179WUGA2zAbm8GF6neaCQ-vR4iNxPDH_TWhZeJ6uTwOjAwX74kVXsafcwqTpKixrNEXQGCSIcND2hEqf2mCbSdWX1JxNTtF4lLgLkbnfkKNCcdp6Fn5_iwUlGqLIGVTwgMhS9lSvEGpRNk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] to-transparent"></div>
+</div>
+<div class="p-6 -mt-12 relative z-10">
+<div class="flex items-end gap-4 mb-4">
+<div class="w-16 h-16 rounded border-2 border-[#1A1A1A] overflow-hidden bg-[#050505]">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzXRsspDK7O2cnwtxCClhHxOdsh5-KhoqrJ6yJlnvdnWWIe5i6v3jqajplhvsnq7Gal8XoAKW1lzJInqa0Vd4oH3xAm6GAjqPK87jU7aY9Lkm9JNy3vgs_OFVTJYUwOUh0MTtqm4_JafEg1QQcnmQWY9_MEccP0hSKOb7LxRmVPWHLzIuHiL3mLuPWhMw_U2I4KhxYwcbMXd7elE0ERaOoXD2J9_iC6BrwmjMdumOt0WPa8ybyGWLJ19bF1yhQKnOV576Yn5-wFWo"/>
+</div>
+<div>
+<h4 class="text-white font-bold">Elias Thorne</h4>
+<p class="text-zinc-500 text-[10px] uppercase font-bold tracking-widest">SPOTLIGHT</p>
+</div>
+</div>
+<p class="text-sm text-zinc-400 mb-4">Featured in recent masterpieces including 'The Glass Horizon' and 'Signal Zero'.</p>
+<button class="w-full border border-[#333333] text-white py-2 rounded text-metadata font-metadata hover:bg-white hover:text-black transition-all">
+                View Filmography
+              </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on Directory per instructions but scaffolded if needed for Home) -->
+<!-- <button class="fixed bottom-8 right-8 bg-white text-black w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-50">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+  </button> -->
+</body></html>

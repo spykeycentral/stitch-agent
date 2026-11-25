@@ -1,0 +1,71 @@
+{
+  "name": "spykey-agent",
+  "stitchProjectId": "1931950447522884555",
+  "sources": [
+    {
+      "projectId": "1931950447522884555",
+      "projectTitle": "spykey-agent",
+      "designSystem": {
+        "id": "a79a4e7e09394d1baf1aace123b71722",
+        "displayName": "Warm Paper Editorial"
+      },
+      "screens": [
+        {
+          "id": "2b0000d3fa4c4514a444905322f5b47a",
+          "title": "Media asset library",
+          "route": "/checkout",
+          "files": [
+            "screens/spykey-agent/2b0000d3fa4c4514a444905322f5b47a.html",
+            "screens/spykey-agent/2b0000d3fa4c4514a444905322f5b47a.png"
+          ]
+        }
+      ]
+    },
+    {
+      "projectId": "9443297307706650087",
+      "projectTitle": "Unified Media Archive",
+      "designSystem": {
+        "id": "9a089437093546899304655f813d8f6f",
+        "displayName": "Dark Cinematic"
+      },
+      "screens": [
+        {
+          "id": "3351923286d94fb5a42d894108e8f7cf",
+          "title": "Media Dashboard",
+          "route": "/dashboard",
+          "files": [
+            "screens/unified-media-archive/3351923286d94fb5a42d894108e8f7cf.html",
+            "screens/unified-media-archive/3351923286d94fb5a42d894108e8f7cf.png"
+          ]
+        },
+        {
+          "id": "8ab6d05ba94746e1823ced8f04931474",
+          "title": "Item Detail View",
+          "route": "/detail",
+          "files": [
+            "screens/unified-media-archive/8ab6d05ba94746e1823ced8f04931474.html",
+            "screens/unified-media-archive/8ab6d05ba94746e1823ced8f04931474.png"
+          ]
+        },
+        {
+          "id": "ed108825300b443d868518849336e497",
+          "title": "Media Uploader",
+          "route": "/uploader",
+          "files": [
+            "screens/unified-media-archive/ed108825300b443d868518849336e497.html",
+            "screens/unified-media-archive/ed108825300b443d868518849336e497.png"
+          ]
+        },
+        {
+          "id": "79d2622cffef4fd89d0a921c50b575e3",
+          "title": "Directory",
+          "route": "/directory",
+          "files": [
+            "screens/unified-media-archive/79d2622cffef4fd89d0a921c50b575e3.html",
+            "screens/unified-media-archive/79d2622cffef4fd89d0a921c50b575e3.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

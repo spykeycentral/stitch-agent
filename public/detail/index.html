@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-error": "#690005",
+                  "secondary-fixed": "#e5e2e1",
+                  "on-tertiary": "#303030",
+                  "on-background": "#e5e2e1",
+                  "on-tertiary-fixed-variant": "#474747",
+                  "surface-bright": "#3a3939",
+                  "on-primary-fixed": "#1a1c1c",
+                  "error": "#ffb4ab",
+                  "error-container": "#93000a",
+                  "background": "#131313",
+                  "surface-container-lowest": "#0e0e0e",
+                  "surface-tint": "#c6c6c7",
+                  "inverse-on-surface": "#313030",
+                  "surface-container-high": "#2a2a2a",
+                  "outline": "#8e9192",
+                  "surface-container": "#201f1f",
+                  "on-error-container": "#ffdad6",
+                  "inverse-surface": "#e5e2e1",
+                  "surface": "#131313",
+                  "secondary-fixed-dim": "#c8c6c5",
+                  "secondary-container": "#474746",
+                  "on-tertiary-fixed": "#1b1c1c",
+                  "tertiary": "#ffffff",
+                  "surface-container-low": "#1c1b1b",
+                  "on-secondary-fixed-variant": "#474746",
+                  "on-tertiary-container": "#656464",
+                  "on-primary-fixed-variant": "#454747",
+                  "primary": "#ffffff",
+                  "inverse-primary": "#5d5f5f",
+                  "on-primary": "#2f3131",
+                  "surface-variant": "#353534",
+                  "tertiary-fixed": "#e4e2e1",
+                  "primary-fixed-dim": "#c6c6c7",
+                  "tertiary-fixed-dim": "#c8c6c6",
+                  "tertiary-container": "#e4e2e1",
+                  "surface-dim": "#131313",
+                  "on-secondary-fixed": "#1c1b1b",
+                  "on-secondary-container": "#b7b5b4",
+                  "on-surface-variant": "#c4c7c8",
+                  "surface-container-highest": "#353534",
+                  "primary-fixed": "#e2e2e2",
+                  "on-primary-container": "#636565",
+                  "on-surface": "#e5e2e1",
+                  "primary-container": "#e2e2e2",
+                  "on-secondary": "#313030",
+                  "secondary": "#c8c6c5",
+                  "outline-variant": "#444748"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "grid-gap": "32px",
+                  "gutter": "24px",
+                  "unit": "8px",
+                  "container-max": "1600px",
+                  "margin": "48px"
+          },
+          "fontFamily": {
+                  "metadata": ["Inter"],
+                  "label-caps": ["Inter"],
+                  "headline-lg": ["Inter"],
+                  "headline-md": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "display": ["Inter"],
+                  "body-md": ["Inter"]
+          },
+          "fontSize": {
+                  "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                  "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                  "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                  "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #050505; color: #e5e2e1; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-effect { background: rgba(20, 20, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<link rel="stylesheet" href="/styles/tokens.css"/>
+</head>
+<body class="font-metadata text-on-background selection:bg-primary selection:text-background">
+<!-- TopNavBar (JSON Anchor) -->
+<header class="bg-[#050505] dark:bg-[#050505] text-white dark:text-white font-inter tracking-tight docked full-width top-0 border-b border-[#1A1A1A] flat no shadows flex justify-between items-center w-full px-8 h-16 fixed z-50">
+<div class="flex items-center gap-12">
+<span class="text-lg font-bold tracking-widest uppercase text-white">Vault</span>
+<nav class="hidden md:flex gap-8">
+<a class="text-white border-b-2 border-white pb-1 font-inter text-sm font-medium" href="/dashboard">Dashboard</a>
+<a class="text-zinc-500 hover:text-white transition-colors font-inter text-sm font-medium" href="/directory">Directory</a>
+<a class="text-zinc-500 hover:text-white transition-colors font-inter text-sm font-medium" href="/uploader">Uploader</a>
+<a class="text-zinc-500 hover:text-white transition-colors font-inter text-sm font-medium" href="/checkout">Checkout</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500">search</span>
+<input class="bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg pl-10 pr-4 py-1.5 text-sm focus:outline-none focus:border-white transition-all w-64" placeholder="Search library..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer transition-colors scale-105">account_circle</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer transition-colors scale-105">settings</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar (JSON Anchor - Suppressed for task-focused view, but implemented as responsive shell) -->
+<aside class="bg-[#050505] dark:bg-[#050505] text-white dark:text-white font-inter text-sm font-medium fixed left-0 top-0 h-screen w-20 lg:w-64 hidden md:flex flex-col py-8 z-40 border-r border-[#1A1A1A] pt-24">
+<div class="px-6 mb-8 hidden lg:block">
+<h2 class="text-white font-black text-xl">Library</h2>
+<p class="text-zinc-500 text-xs mt-1">Private Collection</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-4 lg:px-6 py-3 bg-[#0D0D0D] text-white border-l-2 border-white flex items-center gap-4 cursor-pointer">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="hidden lg:inline"><a href="/dashboard">Dashboard</a></span>
+</div>
+<div class="px-4 lg:px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] flex items-center gap-4 cursor-pointer transition-all">
+<span class="material-symbols-outlined">group_work</span>
+<span class="hidden lg:inline">Directory</span>
+</div>
+<div class="px-4 lg:px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] flex items-center gap-4 cursor-pointer transition-all">
+<span class="material-symbols-outlined">cloud_upload</span>
+<span class="hidden lg:inline">Uploader</span>
+</div>
+<div class="px-4 lg:px-6 py-3 text-zinc-500 hover:text-zinc-200 hover:bg-[#0D0D0D] flex items-center gap-4 cursor-pointer transition-all">
+<span class="material-symbols-outlined">settings</span>
+<span class="hidden lg:inline">Settings</span>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-20 lg:ml-64 pt-16 min-h-screen">
+<div class="max-w-[1600px] mx-auto p-gutter flex flex-col xl:flex-row gap-grid-gap">
+<!-- Left Column: Hero Media Canvas -->
+<section class="flex-grow">
+<!-- Close/Back Action -->
+<div class="mb-6 flex items-center gap-4">
+<button onclick="window.location.href='/dashboard'" class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-caps text-label-caps uppercase">Back to Collection</span>
+</button>
+</div>
+<!-- Hero Asset -->
+<div class="relative aspect-video xl:aspect-auto xl:h-[700px] w-full bg-surface-container-lowest rounded-xl overflow-hidden group">
+<img alt="Cinematic cinematic shot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic widescreen shot of a futuristic, brutalist architecture structure at dusk. The building is composed of dark, angular obsidian-like panels with subtle glowing neon white strips tracing the edges. Low-angle perspective looking up, highlighting the immense scale against a moody, deep violet and indigo sky. The lighting is high-contrast, casting sharp shadows and creating a premium digital art aesthetic consistent with a dark cinematic vault interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVm_1nfEyJGKJTb43iTt-W6_njY_SYwCtRRYcGOO1LTPpnS2lCigu9M_Fw0cx5pynvt1BaFepZCrA9YGZs459e1YAwePJaQXO3E5SphUp6ZNp-e_wcE0v6CL-DUYVswNk0Iy8RhiytjSVityviWU8ji98Zs9XH68HdpmV4pjdjaxUY2cVgO_wTttVPmkJnMFk58ZZa9grKokAgfIau-rSj_Cvd-0ORGfqhcEQWgX5ZTwLy0sRdUBEJZVnkHM_xHWpdAlighcmrN7U"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60"></div>
+<!-- Media Controls Overlay -->
+<div class="absolute bottom-0 inset-x-0 p-8 flex items-end justify-between">
+<div class="flex gap-4">
+<button class="bg-white text-background px-8 py-3 rounded-lg flex items-center gap-3 hover:bg-zinc-200 transition-colors font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                Play Now
+              </button>
+<button class="bg-transparent border border-[#333333] text-white px-8 py-3 rounded-lg flex items-center gap-3 hover:bg-white/10 transition-all font-bold">
+<span class="material-symbols-outlined">bookmark</span>
+                Add to List
+              </button>
+</div>
+<div class="flex gap-3">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-black/40 backdrop-blur-md hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-black/40 backdrop-blur-md hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Synopsis & Tabs -->
+<div class="mt-margin">
+<div class="flex gap-12 border-b border-[#1A1A1A] mb-8">
+<button class="pb-4 border-b-2 border-white text-white font-bold">Synopsis</button>
+<button class="pb-4 text-zinc-500 hover:text-white transition-colors font-bold">Media</button>
+<button class="pb-4 text-zinc-500 hover:text-white transition-colors font-bold">Reviews</button>
+<button class="pb-4 text-zinc-500 hover:text-white transition-colors font-bold">Tech Specs</button>
+</div>
+<div class="max-w-3xl">
+<p class="font-body-lg text-body-lg text-zinc-300 leading-relaxed">
+              In a world defined by the boundaries of light and darkness, a solitary archivist discovers a forgotten sequence of data that threatens the very foundation of the global neural network. As the city descends into a high-fidelity digital chaos, they must navigate the labyrinthine corridors of the Vault to preserve the last remaining piece of organic history. A visual masterpiece exploring the intersections of identity, memory, and the digital afterlife.
+            </p>
+</div>
+</div>
+</section>
+<!-- Right Column: Metadata Sidebar -->
+<aside class="w-full xl:w-96 flex flex-col gap-margin">
+<!-- Primary Identity -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-zinc-500 uppercase tracking-widest">Sci-Fi Thriller • 2024</span>
+<h1 class="font-display text-display text-white tracking-tight leading-none uppercase">The Obsidian Protocol</h1>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-metadata text-metadata">9.4</span>
+</div>
+<span class="text-zinc-600">|</span>
+<span class="font-metadata text-metadata text-zinc-400">PG-13</span>
+<span class="text-zinc-600">|</span>
+<span class="font-metadata text-metadata text-zinc-400">2h 14m</span>
+</div>
+</div>
+<!-- Key Links -->
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 py-3 bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg hover:border-zinc-500 transition-all group" href="#">
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white">language</span>
+<span class="text-sm font-medium">Website</span>
+</a>
+<a class="flex items-center justify-center gap-2 py-3 bg-[#0D0D0D] border border-[#1A1A1A] rounded-lg hover:border-zinc-500 transition-all group" href="#">
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white">movie</span>
+<span class="text-sm font-medium">IMDb</span>
+</a>
+</div>
+<!-- Director -->
+<div class="flex flex-col gap-4 p-6 bg-[#0D0D0D] border border-[#1A1A1A] rounded-xl">
+<span class="font-label-caps text-label-caps text-zinc-500 uppercase">Director</span>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-zinc-800 flex-shrink-0">
+<img alt="Director portrait" data-alt="A close-up professional portrait of a male film director with graying hair and glasses. He is wearing a dark, sophisticated suit in a studio setting with dramatic side-lighting. The image has a high-contrast, moody atmosphere with deep blacks and sharp highlights, fitting the premium cinematic theme of the library dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOqKKpvAVFFOFk0LKzHB706UawQDtI57eIccSlWfkLH_wowfiJmTBvWt5eRZI1C3SN6niWCIuQPz1iFc-Psa-4bZAdXTQpm0MQqrMQ0hQ3SR6THBruNNGaFwG8YUdhrBuwVGJGcEQaQjhCcrcy7E-xkkEayMnRfnmFHoDcHCSofEtDXKG5zTzItVtMePqJAhbiyUR4EMFQWw5z37h32xFtm2B-c9KXJMOvsz96UB31ZNYiPlUyZ7wosk948OSgf2oDGKEhx8swfoQ"/>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-bold">Elias Thorne</span>
+<span class="text-zinc-500 text-xs">Auteur / Visionary</span>
+</div>
+</div>
+</div>
+<!-- Actor List -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-zinc-500 uppercase">Cast</span>
+<button class="text-xs text-zinc-400 hover:text-white transition-colors">View All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Actor 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-[#0D0D0D] transition-all cursor-default">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-zinc-800">
+<img alt="Actor portrait" data-alt="A striking portrait of a male actor with defined facial features and intense gaze. Shot in a black and white cinematic style with heavy chiaroscuro lighting that emphasizes the contours of his face. The aesthetic is sophisticated and high-end, matching a premium film archive UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuhPrxjwsluoiqyCRWHEDTD2B00F3Kh3GfzFDfHoVRZD3GOni2ChEgkLTVPx_jiWEsIT10dXV9tJpf_GHZm4yIlCDJOuQD2IPKIYzhkHUqsS1VutyUbTc9It_3Jm3F-n54K6loNBNvkileZoDVtZ03Vwyx0yiD1p5rew_ukobgd_J8_Su2inEdYbpgsLvOUnrWreJ8wqEb2041Lpc08jJCQEjn4JkUNnHDVFAP8mgWInk3srAKI-QUlIAzKfcqCgD8VRgGZcVjk7E"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm text-white font-medium">Kaelen Vance</span>
+<span class="text-xs text-zinc-500 italic">as The Courier</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-zinc-600">chevron_right</span>
+</div>
+<!-- Actor 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-[#0D0D0D] transition-all cursor-default">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-zinc-800">
+<img alt="Actor portrait" data-alt="A moody studio portrait of a female actress with elegant features and dark, sleek hair. The lighting is low-key with a subtle rim light defining her silhouette against a deep charcoal background. The style is modern, cinematic, and professional, reflecting a luxury streaming service aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw_-FL5XkabCYK7ufLt87BGWeKJV1EFX0xVcVuj96b4focQyGKJGFeD9W0OnI331y1HOGFPmlY7Ar6LvbZBoxWDXz-9DOisbpcQ0B21mpoz7unZ6pEpG9Btv-FxkHKgSZKGqdNHbK8zuzDE7B8PQqb331mitWtTTKn5Yi4Z3c8ko_8WIyLHKvy187ZlEj3XVCg89o_I-Do3I5nxuskRMXqXYYolUgXBrs4FwOvyPT_FQM1H8E6lTpFaSIzPU7MJuBAGfESLH5eJAU"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm text-white font-medium">Sarah Jenkins</span>
+<span class="text-xs text-zinc-500 italic">as Aria Flynn</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-zinc-600">chevron_right</span>
+</div>
+<!-- Actor 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-[#0D0D0D] transition-all cursor-default">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-zinc-800">
+<img alt="Actor portrait" data-alt="A portrait of a male actor with a weathered, expressive face and short-cropped hair. He is lit with a warm, single light source from the side, creating deep shadows that convey gravitas and experience. The image follows a high-end photography style suitable for a curated digital vault." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUthT7AMY7jF_i5OuOYCD_S13GuVFQjHkOUYZgyGDOfDwzLLpupEYnTUqTe6Hvz-uA2nh-mqdGfJlx9K4QpG84lrm5LeqUWLPlnLlvusm-gY6QSO9paQ_PdPV3E1WfI-CnSQZUxBPtSEkzdYAj5PPZ5eVTFcU93Unuxu507mL0mOvZoCpL_mgZXFuwDF2men8697mWhdF-0Svm9gdacmdCMA7z1EKA-HyF7CBf0VO08k1Ef8PDJu75PIup1utWq66b7AV4b574IGQ"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm text-white font-medium">Marcus Chen</span>
+<span class="text-xs text-zinc-500 italic">as Commander Wu</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-zinc-600">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Editable Tag Cloud -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-zinc-500 uppercase">Tags</span>
+<button class="material-symbols-outlined text-[20px] text-zinc-500 hover:text-white transition-colors">edit</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#1A1A1A] text-xs text-zinc-300 rounded-full border border-transparent hover:border-white transition-all cursor-pointer">Atmospheric</span>
+<span class="px-3 py-1.5 bg-[#1A1A1A] text-xs text-zinc-300 rounded-full border border-transparent hover:border-white transition-all cursor-pointer">Cyberpunk</span>
+<span class="px-3 py-1.5 bg-[#1A1A1A] text-xs text-zinc-300 rounded-full border border-transparent hover:border-white transition-all cursor-pointer">Dystopian</span>
+<span class="px-3 py-1.5 bg-[#1A1A1A] text-xs text-zinc-300 rounded-full border border-transparent hover:border-white transition-all cursor-pointer">Slow Burn</span>
+<span class="px-3 py-1.5 bg-[#1A1A1A] text-xs text-zinc-300 rounded-full border border-transparent hover:border-white transition-all cursor-pointer">Masterpiece</span>
+<button class="px-3 py-1.5 bg-transparent border border-dashed border-zinc-700 text-xs text-zinc-500 rounded-full hover:border-zinc-400 hover:text-zinc-400 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span>
+              Add Tag
+            </button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Related Content Section (Bento Grid) -->
+<section class="max-w-[1600px] mx-auto p-gutter mt-margin mb-margin">
+<h3 class="font-headline-md text-headline-md text-white mb-8">Related Collections</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-[400px]">
+<div class="md:col-span-2 relative rounded-xl overflow-hidden group cursor-pointer bg-[#0D0D0D] border border-[#1A1A1A]">
+<img alt="Related media" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" data-alt="An abstract cinematic landscape featuring glowing light trails moving through a dark, monolithic stone canyon. The lighting is dominated by deep blues and vibrant cyans, creating a cold, futuristic atmosphere. The visual style is minimal and high-end, designed to act as a placeholder for related content in a luxury media library interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9PJpA3pzxjvKpYZBiYn900beLRvvPPiNcai-9g3TN7xasX7vcxrAyVgQ5LO0igVDCmID2h7jlz1zbBNlRRxzAiJjPTzUwyEBlcSIy6KiF1q9XuQda1jzj8oC5En363Wk5q3T3b7aJjJBoqXIQDtzpNzwHUhcsTETKWqhR5QmcD_DBnV47d3MyijWuzhk2APIhqawzyjTpu-Gx2bzOlNXc3eXzrlW_jamhEKQ_mI4sc7XpHHxkrWBW8Gtjbx-59dt90foiLIoa4Vw"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-white mb-2 uppercase">Series</span>
+<h4 class="text-2xl font-bold text-white uppercase tracking-tighter">The Void Sequences</h4>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group cursor-pointer bg-[#0D0D0D] border border-[#1A1A1A]">
+<img alt="Related media" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" data-alt="A dark, cinematic shot of a rainy neon-lit city street at night, reflected in a puddle of water on the ground. The colors are predominantly deep blacks, electric pinks, and vibrant blues. The overall mood is melancholic and high-fidelity, consistent with a premium dark-themed media vault interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM24BNCEVtkiN3wL-Y7DDpLDPYPjs5QFbwSR8NK3dxPjPfvLVYc2eQ3c8nAawqXHChs4a0tT6clpMTVa2Fr7E7cxVgL3dl2qXQYjm_048zJhv5wiQk6d5QGcEt7CXRNoC4L7_FaVUK-SYchKP9C7u2CgOqwDKYqlbPu50eu-r2Kl2_Fc77nZzotfpOQgrfloiVhOP4DMOMiQugmS9-sqxAJr64OLKwDyTxwt0aV69fv_o2G-2_IJLWaVimdgQ4FUqYVk911SJyuVw"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-white mb-1 uppercase">Anthology</span>
+<h4 class="text-lg font-bold text-white uppercase tracking-tighter">Night Streams</h4>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group cursor-pointer bg-[#0D0D0D] border border-[#1A1A1A]">
+<img alt="Related media" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" data-alt="A macro shot of liquid obsidian swirling with small, glowing particles of white light, resembling a dark nebula. The lighting is sophisticated and moody, using soft glints of light to create a sense of depth and mystery. A premium, abstract background perfectly suited for a high-end cinematic library experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhyXFpv8OsXwjgz41qpeTC5lePtSY95RxNSvDeT_woGHpOjJQC0UhfYzt2ADLGmIWafViaZczaFlBY1YYLPKn7DdYKj3zqixtPtCF0b_B2Sc-c9YxAInylXKnZyYqJO95a4I5Nu3vZEsKW_PUZILVnVnG2cgPO1Bdzooaal4ziU9qYwDT1gNI6Jj-NCuJcsm4NRoUjOcEAp65qNMzOoJ3EsXKFG9VJBIGsO5TFxsi6Vf1Mo2veAVbH3X024cfD9gJwF70rUTdCHqs"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-white mb-1 uppercase">Originals</span>
+<h4 class="text-lg font-bold text-white uppercase tracking-tighter">Carbon Core</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Mobile Navigation (JSON Anchor Logic) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full bg-[#050505] border-t border-[#1A1A1A] flex justify-around items-center h-16 px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-white">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] uppercase font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">group_work</span>
+<span class="text-[10px] uppercase font-bold">Directory</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">cloud_upload</span>
+<span class="text-[10px] uppercase font-bold">Uploader</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] uppercase font-bold">Settings</span>
+</button>
+</footer>
+</body></html>

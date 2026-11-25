@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#1d1b1a", "outline": "#7e7570", "inverse-surface": "#34302b", "on-surface": "#1f1b16", "on-primary-fixed-variant": "#494645", "on-surface-variant": "#4d4541", "surface-container-low": "#fbf2ea", "primary": "#000000", "on-secondary-fixed-variant": "#534437", "on-error-container": "#93000a", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#4b4642", "tertiary-fixed": "#e9e1dc", "surface-container-lowest": "#ffffff", "primary-container": "#1d1b1a", "on-error": "#ffffff", "tertiary-container": "#1e1b18", "surface-container": "#f6ece4", "error-container": "#ffdad6", "inverse-on-surface": "#f8efe7", "secondary-fixed-dim": "#d8c3b2", "background": "#fff8f4", "on-secondary-fixed": "#25190f", "secondary-fixed": "#f5decd", "on-background": "#1f1b16", "on-secondary-container": "#706051", "on-primary": "#ffffff", "secondary": "#6c5b4d", "on-tertiary": "#ffffff", "primary-fixed": "#e7e1df", "surface-container-high": "#f0e7df", "surface-bright": "#fff8f4", "on-primary-container": "#878381", "primary-fixed-dim": "#cbc5c3", "inverse-primary": "#cbc5c3", "surface-container-highest": "#eae1d9", "secondary-container": "#f2dcca", "outline-variant": "#d0c4be", "on-tertiary-fixed": "#1e1b18", "surface": "#fff8f4", "on-secondary": "#ffffff", "surface-variant": "#eae1d9", "on-tertiary-container": "#89837f", "surface-dim": "#e1d8d1", "tertiary": "#000000", "surface-tint": "#615e5c", "tertiary-fixed-dim": "#cdc5c0" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-xl-mobile": [ "Newsreader" ], "headline-xl": [ "Newsreader" ], "headline-lg-mobile": [ "Newsreader" ], "numeral-lg": [ "Geist" ], "label-md": [ "Geist" ], "body-sm": [ "Geist" ], "headline-md": [ "Newsreader" ], "headline-lg": [ "Newsreader" ], "numeral-total": [ "Newsreader" ], "body-lg": [ "Geist" ], "label-sm": [ "Geist" ], "body-md": [ "Geist" ] }, "fontSize": { "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "numeral-lg": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "500" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "numeral-total": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full max-w-7xl mx-auto px-margin-mobile md:px-gutter lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-[140px]"><a class="flex items-center gap-space-xs group" data-path="cart" href="#"><span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center font-headline-md text-headline-md text-on-primary select-none group-hover:opacity-90 transition-opacity">M</span><span class="hidden sm:inline font-headline-md text-headline-md tracking-tight text-on-surface">Maison</span></a></div><nav class="hidden md:flex items-center gap-space-xs font-label-md text-label-md" data-active-classes="text-on-surface font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="cart" href="#">Cart</a><span class="text-outline-variant font-label-sm select-none">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="customer-details" href="#">Details</a><span class="text-outline-variant font-label-sm select-none">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="payment-and-review" href="#">Payment &amp; Review</a></nav><div class="flex items-center gap-space-md justify-end min-w-[140px]"><div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span><span>256-Bit SSL</span></div><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="order-support" href="#"><span class="material-symbols-outlined text-[16px]">help_outline</span><span>Help</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-gutter lg:px-margin py-space-lg lg:py-space-xl">
+<!-- Top Editorial Header & Progress Indicator -->
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg mb-space-lg gap-space-sm bg-surface-container-low/50 rounded-xl p-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">Phase 03 / Final Verification</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-normal tracking-tight">Review &amp; Authorize</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Carefully review your archival consignment, curated delivery schedule, and billing allocation before finalizing transit.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-end">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-highest text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm font-medium">Bespoke Atelier Order · #MZ-9042</span>
+</div>
+</div>
+</div>
+<!-- Asymmetrical Grid: 7 cols Form Flow / 5 cols Order Ledger -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-start">
+<!-- LEFT COLUMN: Delivery & Payment Details (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- 1. Destination Overview Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">01. Destination</span>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-0.5 group" type="button">
+<span>Change Address</span>
+<span class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md bg-surface-container-low/60 p-space-md rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Recipient</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Helena Vance-Laurent</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Director of Collections</p>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Shipping Residence</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">742 Evergreen Terrace</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Suite 4B, Tribeca, NY 10013</p>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Dispatch Contact</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">+1 (212) 555-0184</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">h.vance@laurent-archives.com</p>
+</div>
+</div>
+</section>
+<!-- 2. Interactive Shipping Method Selector -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">02. Curated Transit Method</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span> Est. Arrival Oct 18 - 22
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            All consignments are packed in reinforced pH-neutral archival fiberboard with impact telemetry tags.
+          </p>
+<div class="flex flex-col gap-space-sm" id="shippingOptionsContainer">
+<!-- Option 1: Standard Curated (Selected by Default) -->
+<label class="shipping-card relative flex items-start justify-between p-space-md rounded-lg cursor-pointer transition-all bg-surface-container-high/60 shadow-sm" data-rate="12.00">
+<div class="flex items-start gap-space-md">
+<input checked="" class="mt-1 w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" name="shipping_method" type="radio" value="12.00"/>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md font-medium text-on-surface">Standard Curated Courier</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[10px] tracking-wide uppercase">Tracked Hand-off</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Climate-stabilized ground transport with signature upon delivery. 3–5 business days.
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary pt-0.5">Estimated window: Friday, Oct 20 – Tuesday, Oct 24</p>
+</div>
+</div>
+<div class="text-right pl-space-sm">
+<span class="font-numeral-lg text-numeral-lg text-on-surface block tabular-nums">$12.00</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Included Ins.</span>
+</div>
+</label>
+<!-- Option 2: White Glove Priority -->
+<label class="shipping-card relative flex items-start justify-between p-space-md rounded-lg cursor-pointer transition-all bg-surface-container-low/40 hover:bg-surface-container-low" data-rate="28.00">
+<div class="flex items-start gap-space-md">
+<input class="mt-1 w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" name="shipping_method" type="radio" value="28.00"/>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md font-medium text-on-surface">Express White-Glove Dedicated</span>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] tracking-wide uppercase">Fastest</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Private courier direct delivery inside dwelling, unboxing check, and packaging reclamation. 1–2 business days.
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary pt-0.5">Estimated arrival: Tomorrow, Oct 18 by 2:00 PM</p>
+</div>
+</div>
+<div class="text-right pl-space-sm">
+<span class="font-numeral-lg text-numeral-lg text-on-surface block tabular-nums">$28.00</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">VIP Priority</span>
+</div>
+</label>
+<!-- Option 3: Eco Postal Carbon Neutral -->
+<label class="shipping-card relative flex items-start justify-between p-space-md rounded-lg cursor-pointer transition-all bg-surface-container-low/40 hover:bg-surface-container-low" data-rate="8.00">
+<div class="flex items-start gap-space-md">
+<input class="mt-1 w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" name="shipping_method" type="radio" value="8.00"/>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md font-medium text-on-surface">Eco Postal Carbon-Neutral</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] tracking-wide uppercase">Low Impact</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Consolidated zero-emission electric fleet last mile route. 4–6 business days.
+                  </p>
+<p class="font-label-sm text-label-sm text-secondary pt-0.5">Estimated window: Monday, Oct 23 – Thursday, Oct 26</p>
+</div>
+</div>
+<div class="text-right pl-space-sm">
+<span class="font-numeral-lg text-numeral-lg text-on-surface block tabular-nums">$8.00</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Net-Zero</span>
+</div>
+</label>
+</div>
+</section>
+<!-- 3. Payment Method Architecture -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">03. Payment Authorization</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">security</span>
+<span>Hardware Token Level Security</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Direct banking credentials and tokenized card vaults are never stored on public networks.
+          </p>
+<!-- Tab Selector for Payment Types -->
+<div class="grid grid-cols-3 gap-space-xs p-1 bg-surface-container-low rounded-lg mb-space-md">
+<button class="py-2 px-space-sm rounded font-label-md text-label-md font-medium text-on-surface bg-surface-container-lowest shadow-sm transition-all text-center" id="tabCard" type="button">
+              Credit Card
+            </button>
+<button class="py-2 px-space-sm rounded font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all text-center" id="tabApple" type="button">
+              Apple Pay
+            </button>
+<button class="py-2 px-space-sm rounded font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-all text-center" id="tabWire" type="button">
+              Bank Wire / Swift
+            </button>
+</div>
+<!-- Stored Card Visual / Active Details -->
+<div class="bg-surface-container-low/50 rounded-xl p-space-md mb-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-7 rounded bg-surface-container-highest flex items-center justify-center font-label-sm font-semibold tracking-wider text-on-surface text-[10px]">
+                  VISA
+                </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md font-medium text-on-surface">Private Obsidian Card</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">Primary</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant tracking-wider">•••• •••• •••• 4092</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Exp</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">08/27</span>
+</div>
+</div>
+<!-- Card Inputs Mock -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">CVV / Security Token</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest rounded px-space-sm py-2 text-on-surface font-body-md focus:outline-none focus:bg-surface-container-lowest" maxlength="4" type="password" value="•••"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-on-surface-variant">lock</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Billing ZIP Code</label>
+<input class="w-full bg-surface-container-lowest rounded px-space-sm py-2 text-on-surface font-body-md focus:outline-none" type="text" value="10013"/>
+</div>
+</div>
+</div>
+<!-- Billing address match toggle -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Billing address mirrors curated shipping location</span>
+</label>
+</section>
+<!-- 4. Dispatch Action Button & Assurances -->
+<div class="space-y-space-sm">
+<button class="w-full h-14 bg-primary hover:bg-neutral-800 text-on-primary rounded-xl font-label-md text-label-md font-medium tracking-wide uppercase transition-all flex items-center justify-center gap-space-sm shadow-md hover:shadow-lg active:scale-[0.995]" id="authorizeButton" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span id="buttonTotalText">Authorize Payment · $384.50 USD</span>
+</button>
+<div class="flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-space-xs px-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">history_edu</span>
+<span>Encrypted 256-bit SSL transaction</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">assignment_return</span>
+<span>30-day effortless white-glove returns</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Order Review & Itemized Ledger (5 cols - Sticky Module) -->
+<div class="lg:col-span-5 relative">
+<div class="sticky top-28 bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Summary Header -->
+<div class="flex items-baseline justify-between pb-space-xs">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Acquisition Docket</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-normal">Order Summary</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">3 Items</span>
+</div>
+<!-- Itemized Line Items -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-md">
+<div class="w-20 h-24 rounded bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A minimalist fine-art archival monograph book with embossed typographic lettering on textured heavy cream paper cover, warm studio lighting, neutral luxury background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEExg2h2coK2H5WzuESWZ7eVWGqg6m7YmeD8ONuZo4G9FaoAWeAiaIvWVtCBqTnzWd9Zd0btiHZtL_eCQJ7RtMD63fZyGv-MCiyRcV7F1q9iiIQNj5PmmJZb4yxGyCfohDtlbxCfPpjB-x8NeTetAeQhF88NRjBxO2GDbuBkxBEgaOcWs5FxfDGmI6CvssY0QOpyDJdmQbDlW7fuzkn8vhRGLuVsziXNjBoJbn8IIAcBOmoPf8t8IkCpeDrg-OBA"/>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="space-y-0.5">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-snug line-clamp-2">
+                    Archival Monograph: Modernist Typographic Forms
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Edition 04 · Linen Slipcase</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 01</span>
+<span class="font-numeral-lg text-numeral-lg text-on-surface font-medium tabular-nums">$185.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-md">
+<div class="w-20 h-24 rounded bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="An artisanal textured sand-beige linen bound sketchbook journal lying on an aged oak desk with delicate gold foil accent line on spine, warm morning shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcmm22w-bKUf5G2CpeFQNPhZHGPSYghonYLHhhUh-LgKYTYgaeoajAdXBdSV7clGx886Mm0r--VhsDThLtlPEgUq0Yg7OCfOiOq8Hc5ZTYZq4i6iAdSiwI0ckkxcgw2PO_yb-dsTrLCOcmDbKy5hKPTv7RFzitwk1lxiedybkyjMY_YTkuhSwI-ohB08wbmSYIlxVau9qpcBiFMLBP77dkcraW8uEdhnviO8cUZkwXu2X996bE-T5p-9hc2IEYfg"/>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="space-y-0.5">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-snug line-clamp-2">
+                    Linen Bound Editorial Swatch Journal
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Oatmeal / Unbleached 180gsm</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 01</span>
+<span class="font-numeral-lg text-numeral-lg text-on-surface font-medium tabular-nums">$62.00</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-space-md">
+<div class="w-20 h-24 rounded bg-surface-container-high flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A machined solid raw brass desktop writing stylus rested in an architectural heavy brass pedestal stand, soft reflective golden sheen, neutral beige backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUHEwajtIQxRxR0D-Tk8sHehe4FoPT5Hf8b-ee4Fv8HDkUoY0CjI4uj25jaBFAIOPzp5K_q4258Il6-rc4xQDyh0UTqAKGXao_i8POjUyLvZJ_pL6n0bqA5JDQABfqFRDMLz4BF-DCOBG92AxMynjHYiLHie9tWOGeXFRrXIIVt7_e2D5aj0o198qGrRrfeFDUMPAsCOUXVtHJ12ZTgFj-p34lVLNN-I53tYmFBeHi5NgP9w0pZ__C63unAI_j7Q"/>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="space-y-0.5">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-snug line-clamp-2">
+                    Handcrafted Brass Desktop Stylus &amp; Stand
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Milled Solid Brass · Patina Finished</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 01</span>
+<span class="font-numeral-lg text-numeral-lg text-on-surface font-medium tabular-nums">$95.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Promo Voucher Application Input -->
+<div class="p-space-sm bg-surface-container-low/70 rounded-lg">
+<div class="flex gap-space-xs">
+<div class="relative flex-grow">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 text-body-sm font-body-sm rounded px-space-sm py-2 uppercase tracking-wider focus:outline-none" id="promoInput" placeholder="Curator code or gift token" type="text"/>
+</div>
+<button class="px-space-md py-2 bg-surface-container-highest hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold rounded uppercase tracking-wider transition-colors" id="applyPromoBtn" type="button">
+                Apply
+              </button>
+</div>
+<div class="hidden mt-1.5 px-1 font-label-sm text-label-sm text-secondary flex items-center gap-1" id="promoFeedback">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>PATRON10 applied: 10% archival courtesy</span>
+</div>
+</div>
+<!-- Financial Breakdown Sheet -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Item Subtotal</span>
+<span class="text-on-surface tabular-nums" id="subtotalVal">$342.00</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span>Shipping Transit</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">info</span>
+</span>
+<span class="text-on-surface tabular-nums" id="shippingVal">$12.00</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Estimated Sales Tax (8.875%)</span>
+<span class="text-on-surface tabular-nums" id="taxVal">$30.50</span>
+</div>
+<!-- Carbon Offset Add-on Toggle -->
+<div class="flex justify-between items-center py-space-xs bg-surface-container-low/50 px-space-xs rounded">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary cursor-pointer" id="carbonToggle" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Verified Highland Forest Reforestation</span>
+</label>
+<span class="font-body-sm text-body-sm text-on-surface tabular-nums" id="carbonVal">+$1.50</span>
+</div>
+</div>
+<!-- Ledger Grand Total -->
+<div class="pt-space-sm bg-surface-container-high/40 p-space-md rounded-lg flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">Total Payable</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Including duties &amp; dispatch insurance</span>
+</div>
+<div class="text-right">
+<span class="font-numeral-total text-numeral-total text-on-surface font-normal tabular-nums" id="grandTotalVal">
+                $386.00
+              </span>
+</div>
+</div>
+<!-- Trust & Provenance Reassurances -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs text-center">
+<div class="p-space-xs rounded bg-surface-container-low/40 space-y-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary block mx-auto">nature</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase leading-tight">Carbon Neutral</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low/40 space-y-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary block mx-auto">workspace_premium</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase leading-tight">Authenticity</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low/40 space-y-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary block mx-auto">palette</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase leading-tight">Artisan Direct</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    (function initCheckoutInteraction() {
+      let subtotal = 342.00;
+      let shipping = 12.00;
+      let tax = 30.50;
+      let carbon = 1.50;
+      let discount = 0.00;
+
+      const shippingCards = document.querySelectorAll('.shipping-card');
+      const shippingRadioInputs = document.querySelectorAll('input[name="shipping_method"]');
+      const carbonToggle = document.getElementById('carbonToggle');
+      const shippingValEl = document.getElementById('shippingVal');
+      const grandTotalValEl = document.getElementById('grandTotalVal');
+      const buttonTotalTextEl = document.getElementById('buttonTotalText');
+      const carbonValEl = document.getElementById('carbonVal');
+      const promoInput = document.getElementById('promoInput');
+      const applyPromoBtn = document.getElementById('applyPromoBtn');
+      const promoFeedback = document.getElementById('promoFeedback');
+
+      function calculateTotal() {
+        const total = subtotal - discount + shipping + tax + (carbonToggle.checked ? carbon : 0);
+        const formatted = '$' + total.toFixed(2);
+        grandTotalValEl.textContent = formatted;
+        buttonTotalTextEl.textContent = 'Authorize Payment · ' + formatted + ' USD';
+        shippingValEl.textContent = '$' + shipping.toFixed(2);
+      }
+
+      // Handle Shipping selection states
+      shippingCards.forEach(card => {
+        card.addEventListener('click', () => {
+          shippingCards.forEach(c => {
+            c.classList.remove('bg-surface-container-high/60', 'shadow-sm');
+            c.classList.add('bg-surface-container-low/40');
+          });
+          card.classList.remove('bg-surface-container-low/40');
+          card.classList.add('bg-surface-container-high/60', 'shadow-sm');
+
+          const radio = card.querySelector('input[type="radio"]');
+          radio.checked = true;
+          shipping = parseFloat(card.getAttribute('data-rate'));
+          calculateTotal();
+        });
+      });
+
+      // Handle Carbon offset toggle
+      if (carbonToggle) {
+        carbonToggle.addEventListener('change', () => {
+          if (!carbonToggle.checked) {
+            carbonValEl.textContent = '$0.00';
+            carbonValEl.classList.add('line-through', 'text-on-surface-variant/60');
+          } else {
+            carbonValEl.textContent = '+$1.50';
+            carbonValEl.classList.remove('line-through', 'text-on-surface-variant/60');
+          }
+          calculateTotal();
+        });
+      }
+
+      // Handle Promo Code Mock
+      if (applyPromoBtn) {
+        applyPromoBtn.addEventListener('click', () => {
+          const code = promoInput.value.trim().toUpperCase();
+          if (code === 'PATRON10' || code === 'ARCHIVE') {
+            discount = 34.20;
+            promoFeedback.classList.remove('hidden');
+            promoFeedback.innerHTML = '<span class="material-symbols-outlined text-[13px]">check_circle</span><span>10% Patron Courtesy Privilege applied (-$34.20)</span>';
+            calculateTotal();
+          } else if (code.length > 0) {
+            promoFeedback.classList.remove('hidden');
+            promoFeedback.innerHTML = '<span class="material-symbols-outlined text-[13px] text-error">error</span><span class="text-error">Unrecognized archival token.</span>';
+          }
+        });
+      }
+
+      // Handle Payment Tabs
+      const tabs = [
+        { btn: document.getElementById('tabCard'), type: 'card' },
+        { btn: document.getElementById('tabApple'), type: 'apple' },
+        { btn: document.getElementById('tabWire'), type: 'wire' }
+      ];
+
+      tabs.forEach(tab => {
+        if (!tab.btn) return;
+        tab.btn.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.btn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+            t.btn.classList.add('text-on-surface-variant');
+          });
+          tab.btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+          tab.btn.classList.remove('text-on-surface-variant');
+        });
+      });
+
+      calculateTotal();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile md:px-gutter lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">verified_user</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Encrypted &amp; Secure Purchase</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="order-support" href="#">Assistance</a><span class="text-outline-variant">•</span><span>© 2025 Maison Studio</span></div></div></footer></body></html>
